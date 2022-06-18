@@ -29,7 +29,6 @@ app.route('/clients/:id')
 
         return res.json(client);
     })
-
     .put((req, res) => {
         const { id } = req.params;
         const client = data.find(client_i => client_i.id == id);
@@ -43,7 +42,6 @@ app.route('/clients/:id')
 
         return res.json(client);
     })
-    
     .delete((req, res) => {
         const { id } = req.params;
         data = data.filter(client => client.id != id);
